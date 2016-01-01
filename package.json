@@ -1,6 +1,6 @@
 {
   "name": "bluebird-deep-props",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "resolve deep props in promise object",
   "main": "index.js",
   "dependencies": {
