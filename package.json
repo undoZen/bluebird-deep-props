@@ -1,0 +1,31 @@
+{
+  "name": "bluebird-deep-props",
+  "version": "0.0.0",
+  "description": "resolve deep props in promise object",
+  "main": "index.js",
+  "dependencies": {
+    "bluebird": "^3",
+    "lodash": "^3"
+  },
+  "devDependencies": {
+    "istanbul-harmony": "^0.3.16",
+    "tape": "^4.4.0"
+  },
+  "scripts": {
+    "test": "rm -rf coverage/ && prove --exec \"istanbul cover --include-pid --report none --print none\" test.js && istanbul report --report cobertura --report html --report text-summary"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/undoZen/bluebird-deep-props.git"
+  },
+  "keywords": [
+    "promise",
+    "bluebird"
+  ],
+  "author": "undoZen <opensource@undozen.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/undoZen/bluebird-deep-props/issues"
+  },
+  "homepage": "https://github.com/undoZen/bluebird-deep-props#readme"
+}
