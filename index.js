@@ -17,7 +17,7 @@ function isPrimitive(val) {
 }
 
 function resolveDeepProps(obj) {
-    if (isPrimitive(obj) || (!isPromise(obj) && _.every(obj, v => !isPromise(v)))) {
+    if (isPrimitive(obj)) {
         return Promise.resolve(obj);
     }
     return resolveArrayOrObject(obj)
