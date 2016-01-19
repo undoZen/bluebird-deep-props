@@ -9,9 +9,6 @@ function resolveArrayOrObject(obj) {
         return Array.isArray(resolved) ? Promise.all(resolved) : Promise.props(resolved);
     });
 }
-function isPromise(obj) {
-    return obj && obj.then && typeof obj.then === 'function';
-}
 function isPrimitive(val) {
     return val == null || val === true || val === false ||
         typeof val === "string" || typeof val === "number";
