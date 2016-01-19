@@ -1,6 +1,7 @@
 'use strict';
 
-var _ = require('lodash');
+var map = require('lodash.map');
+var mapValues = require('lodash.mapValues');
 var Promise = require('bluebird');
 
 function resolveArrayOrObject(obj) {
@@ -22,7 +23,7 @@ function resolveDeepProps(obj) {
     }
     return resolveArrayOrObject(obj)
         .then(function (resolved) {
-            var mapfun = _[Array.isArray(resolved) ? 'map' : 'mapValues'];
+            var mapfun = Array.isArray(resolved) ? map : mapValues;
             return resolveArrayOrObject(mapfun(resolved, resolveDeepProps));
         });
 }
