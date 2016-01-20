@@ -1,7 +1,7 @@
 'use strict';
 
 var map = require('lodash.map');
-var mapValues = require('lodash.mapValues');
+var mapValues = require('lodash.mapvalues');
 var Promise = require('bluebird');
 
 function resolveArrayOrObject(obj) {
